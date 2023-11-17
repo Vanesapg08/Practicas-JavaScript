@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "hola">
+
+    </div>
+<script>
+    let div1 = document.getElementById("hola");
+    const divTitulo = document.createElement("div");
+    const divH1 = document.createElement("h1");
+    divH1.innerText = "Esta es mi Pagina web";
+    const otro = document.createElement("nav");
+    const otro1 = document.createElement("a");
+    otro1.href="hola.html";
+    otro1.innerText = "Click";
+    divTitulo.appendChild(divH1);
+    divTitulo.appendChild(otro);
+    otro.appendChild(otro1);
+    div1.appendChild(divTitulo);
+
+    
+
+
+</script>
+
+</body>
+</html>

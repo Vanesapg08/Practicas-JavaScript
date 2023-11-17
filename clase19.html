@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="mostrarSeccionCategorias()">Categorias</button>
+        <button onclick="mostrarSeccionInventario()">Inventario</button>
+        <button onclick="mostrarSeccionProductos()">Productos</button>
+        <button onclick="mostrarSeccionCaracteristicas()">Caracteristicas</button>
+        <button onclick="mostrarSeccionActualizar()">Actualizar</button>
+    </div>
+
+    <div id="categorias">
+        <h1>Categorias</h1>
+        <button onclick="mostrarVerCategorias()">Ver todos</button>
+        <button onclick="mostrarCrearCategorias()">Crear</button>
+        <button onclick="mostrarBorrarCategorias()">Borrar</button>
+
+        <div id="verCategorias">
+            <h1>Ver Categorias</h1>
+            <div id="listaCategorias"></div>
+    
+        </div>
+        <div id="crearCategorias">
+            <h1>Crear Categorias</h1>
+            nombre: <input type="text" id="nombreCategoria"/>
+            descripcion <input type="text" id="descripcionCategoria"/>
+        <button onclick="crearCategorias()">GUARDAR</button>
+        </div>
+
+        <div id="borrarCategorias">
+            <h1>Borrar Categorias</h1>
+            ID: <input type="text" id="IDBorrarCategorias"/>
+            <button onclick="borrarCategorias()">BORRAR</button>
+        </div>
+    
+    </div>
+
+    <div id="inventario">
+        <h1>Inventario</h1>
+        <button onclick="mostrarVerInventario()">Ver Inventario</button>
+        <button onclick="mostrarCrearInventario()">Crear</button>
+        <button onclick="mostrarBorrarInventario()">Borrar</button>
+
+        <div id="verInventario">
+            <h1>Ver Inventario</h1>
+            <div id="listaInventario"></div>
+            Product Id: <input type="text" id="fresaInput"/>
+            <button onclick="ejecutarVerInventario()">Buscar en Inventario</button>
+            
+        </div>
+        <div id="crearInventario">
+            <h1>Crear Inventario</h1>
+            nombre: <input type="text" id="nombreInventario"/>
+            descripcion <input type="text" id="descripcionInventario"/>
+        <button onclick="crearInventario()">GUARDAR</button>
+        </div>
+
+        <div id="borrarInventario">
+            <h1>Borrar Inventario</h1>
+            ID: <input type="text" id="IDBorrarInventario"/>
+            <button onclick="borrarInventario()">BORRAR</button>
+    </div>
+    </div>
+    
+
+
+
+    <div id="productos">
+        <h1>Productos</h1>
+        <button onclick="mostrarVerProductos()">Ver todos</button>
+        <button onclick="mostrarCrearProductos()">Crear</button>
+        <button onclick="mostrarBorrarProductos()">Borrar</button>
+
+        <div id="verProductos">
+            <h1>Ver Productos</h1>
+            <div id="listaProductos"></div>
+    
+        </div>
+        <div id="crearProductos">
+            <h1>Crear Productos</h1>
+            nombre: <input type="text" id="nombreProductos"/>
+            descripcion <input type="text" id="descripcionProductos"/>
+        <button onclick="crearProductos()">GUARDAR</button>
+        </div>
+
+        <div id="borrarProductos">
+            <h1>Borrar Productos</h1>
+            ID: <input type="text" id="IDBorrarProductos"/>
+            <button onclick="borrarProductos()">BORRAR</button>
+    </div>
+    </div>
+    
+
+    <div id="caracteristicas">
+        <h1>Caracteristicas</h1>
+        <button onclick="mostrarVerCaracteristicas()">Ver todos</button>
+        <button onclick="mostrarCrearCaracteristicas()">Crear</button>
+        <button onclick="mostrarBorrarCaracteristicas()">Borrar</button>
+    
+        <div id="verCaracteristicas">
+            <h1>Ver Caracteristicas</h1>
+            <div id="listaCaracteristicas"></div>
+    
+        </div>
+        <div id="crearCaracteristicas">
+            <h1>Crear Caracteristicas</h1>
+            nombre: <input type="text" id="nombreCaracteristicas"/>
+            descripcion <input type="text" id="descripcionCaracteristicas"/>
+        <button onclick="crearCaracteristicas()">GUARDAR</button>
+        </div>
+
+        <div id="borrarCaracteristicas">
+            <h1>Borrar Caracteristicas</h1>
+            ID: <input type="text" id="IDBorrarCaracteristicas"/>
+            <button onclick="borrarCaracteristicas()">BORRAR</button>
+        </div>
+    </div>
+
+    <div id="actualizar">
+        <h1>Actualizar</h1>
+        <button onclick="mostrarVerActualizar()">Ver todos</button>
+        <button onclick="mostrarCrearActualizar()">Crear</button>
+        <button onclick="mostrarBorrarActualizar()">Borrar</button>
+
+        <div id="verActualizar">
+            <h1>Ver Actualizar</h1>
+            <div id="listaActualizar"></div>
+    
+        </div>
+        <div id="crearActualizar">
+            <h1>Crear Actualizar</h1>
+            nombre: <input type="text" id="nombreActualizar"/>
+            descripcion <input type="text" id="descripcionActualizar"/>
+        <button onclick="crearActualizar()">GUARDAR</button>
+        </div>
+
+        <div id="borrarActualizar">
+            <h1>Borrar Actualizar</h1>
+            ID: <input type="text" id="IDBorrarActualizar"/>
+            <button onclick="borrarActualizars()">BORRAR</button>
+        </div>
+    
+    </div>
+
+    
+    <script>
+
+        //variables globales por eso las dejamos ahi
+        let divCategorias = document.getElementById("categorias");
+        let divInventario = document.getElementById("inventario");
+        let divProductos = document.getElementById("productos");
+        let divCaracteristicas = document.getElementById("caracteristicas");
+        let divActualizar = document.getElementById("actualizar");
+
+        divCategorias.hidden = true;
+        divInventario.hidden = true;
+        divProductos.hidden = true;
+        divCaracteristicas.hidden = true;
+        divActualizar.hidden = true;
+
+
+    </script>
+    <script src="./clase19-categorias.js"></script>
+    <script src="./clase19-inventarios.js"></script>
+    <script src="./clase19-productos.js"></script>
+    <script src="./clase19-caracteristicas.js"></script>
+    <script src="./clase19-actualizar.js"></script>
+</body>
+</html>

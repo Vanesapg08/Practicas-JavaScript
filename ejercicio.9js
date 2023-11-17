@@ -1,0 +1,22 @@
+//Declara un array con tus 5 películas favoritas. Solicita al usuario un número entre 1 y 5 y muestra la película que corresponde a ese número
+
+const prompt = require("prompt-sync")();
+
+let peliculasFavoritas = ["Pelicula1", "Pelicula2", "Pelicula3", "Pelicula4", "Pelicula5"];
+
+let numeroUsuario = prompt("Ingresa un número entre 1 y 5 :");
+
+numeroUsuario = Number(numeroUsuario);
+
+if (numeroUsuario >= 1 && numeroUsuario <= 5) {
+    let peliculaElegida = peliculasFavoritas[numeroUsuario - 1];
+    console.log("Tu película favorita número " + numeroUsuario + " es: " + peliculaElegida);
+} else {
+    console.log("El número ingresado no está en el rango válido (1-5).");
+}
+
+
+
+
+
+

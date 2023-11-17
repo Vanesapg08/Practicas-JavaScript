@@ -1,0 +1,13 @@
+//Teniendo un array de 10 números, encuentra y muestra en consola la suma de todos ellos.
+
+const prompt = require("prompt-sync")();
+
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (let i = 0; i < numeros; i+1) {
+}
+
+console.log("La suma de los números es: " + suma);
+
+ME FALTAAAA NO ME DAAAAA. ----- AYUDA
+

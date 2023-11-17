@@ -1,0 +1,10 @@
+//Solicita al usuario un número. Si el número es mayor que 10, muestra un mensaje que diga "Es mayor que 10". De lo contrario, "Es 10 o menos".
+
+const prompt = require("prompt-sync")();
+
+let numero = prompt("Ingresa un numero: ");
+if (numero > 10){
+console.log("El numero es mayor a 10");
+} else { 
+console.log("El numero es menor a 10");
+} 

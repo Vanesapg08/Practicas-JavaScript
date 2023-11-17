@@ -1,0 +1,19 @@
+//Pide al usuario su edad y si posee licencia de conducir. Si tiene más de 18 años y posee licencia, muestra un mensaje indicando que puede conducir. Si tiene licencia pero 
+es menor de 18, muestra un mensaje de advertencia. Si no tiene licencia, indica que no puede conducir.
+
+const prompt = require("prompt-sync")();
+
+let edadUsuario = prompt("Por favor, ingrese su edad:");
+let tieneLicencia = confirm("¿Posee licencia de conducir? (Aceptar para Sí, Cancelar para No)");
+
+edadUsuario = Numero(edadUsuario);
+
+if (edadUsuario >= 18) {
+    if (tieneLicencia) {
+        console.log("Puede conducir.");
+    } else {
+        console.log("Tiene la edad suficiente para conducir, pero no tiene licencia.");
+    }
+} else {
+    console.log("No puede conducir, ya que es menor de 18 años.");
+}

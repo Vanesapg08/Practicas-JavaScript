@@ -1,0 +1,33 @@
+//Pregunta al usuario su día de la semana favorito. Usa un switch para mostrar una actividad recomendada para ese día.
+
+const prompt = require("prompt-sync")();
+
+
+let diaFavorito = prompt("Cual es tu dia favorito de la semana? ");
+
+switch (diaFavorito) {
+case "lunes":
+    console.log("Lunes puedes hacer ejercicio por la mañana.");
+    break;
+  case "martes":
+    console.log("Martes puedes ir a clase de cocina.");
+    break;
+  case "miercoles":
+    console.log("Miercoles puedes ir a nadar.");
+    break;
+  case "jueves":
+    console.log("Jueves es un buen día para socializar. Planea una cita con amigos o familiares.");
+    break;
+  case "viernes":
+    console.log("Viernes sal a comer.");
+    break;
+  case "sabado":
+    console.log("Sabado puedes hacer actividades al aire libre.");
+    break;
+  case "domingo":
+    console.log("Domingo es un día para relajarte y ver peliculas.");
+    break;
+  default:
+    console.log("Ese dia de la semana no es valido. Por favor, ingresa otro dia.");
+
+}

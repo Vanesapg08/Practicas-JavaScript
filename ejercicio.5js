@@ -1,0 +1,21 @@
+//Pide al usuario un número. Si el número es igual a 0, muestra "Cero". Si es positivo, muestra "Positivo". Si es negativo, muestra "Negativo".
+
+const prompt = require("prompt-sync")();
+
+let numero = prompt("Ingresa un numero: ");
+numero = Number(numero);
+
+if (numero == 0){
+console.log("Cero");
+} else if (numero > 0) {
+    console.log("Positivo");
+} else {
+    console.log("Negativo");
+}
+
+
+
+
+
+
+

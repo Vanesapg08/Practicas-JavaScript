@@ -1,0 +1,40 @@
+
+//Pide al usuario 5 números y utiliza un bucle para determinar cuántos de ellos son positivos. Al final, muestra la cantidad en consola.
+
+const prompt = require("prompt-sync")();
+
+let numero1 = prompt("Dame un numero1: ");
+numero1 = Number(numero1);
+
+let numero2 = prompt("Dame un numero2: "); 
+numero2 = Number(numero2);
+
+let numero3 = prompt("Dame un numero3: ");
+numero3 = Number(numero3);
+
+let numero4 = prompt("Dame un numero4: ");
+numero4 = Number(numero4);
+
+let numero5 = prompt("Dame un numero5: ");
+numero5 = Number(numero5);
+
+let acumulador = 0; //Esta es la variable que voy a guardar para determinar cuantos son positivos.
+
+if(numero1 > 0) {
+   acumulador = acumulador + 1;
+}
+if(numero2 > 0) {
+   acumulador = acumulador + 1;
+}
+if(numero3 > 0) {
+   acumulador = acumulador + 1;
+}  
+if(numero4 > 0) {
+   acumulador = acumulador + 1;
+} 
+if(numero5 > 0) {
+   acumulador = acumulador + 1;
+} 
+
+console.log("La cantidad de numeros positivos que ingresaste es: " + acumulador);
+

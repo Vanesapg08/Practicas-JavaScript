@@ -1,0 +1,15 @@
+//
+
+const prompt = require("prompt-sync")();
+
+let numeroUsuario = prompt("Por favor, ingrese un número:");
+
+numeroUsuario = Number(numeroUsuario);
+
+if (numeroUsuario > 0) {
+    console.log("El número ingresado es positivo.");
+} else if (numeroUsuario == 0) {
+    console.log("El número ingresado es igual a cero.");
+} else {
+    console.log("El número ingresado es negativo.");
+}

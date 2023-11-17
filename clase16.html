@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="cuenta">
+     nombre: <input id="nombre" />
+     cedula: <input id="cedula" />
+     <button onclick="crearCuenta()">Crear cuenta</button>
+  </div>
+
+  
+  <div id="informacion">
+        <button onclick="verSaldo()">Saldo cuenta</button>
+        <button onclick="retirar()">Retirar dinero</button>
+        <button onclick="ingreso()">Ingresar dinero</button>
+        <button onclick="borrarCuenta()">Borrar cuenta</button>
+  </div>
+
+  <div id="retiro">
+    <input id ="valorRetirar">
+    <button onclick="ejecutarRetiro()">Ejecutar retiro</button>
+  </div>
+
+  <div id="errorSaldo">
+  </div>
+
+  <div id="ingresar">
+    <input id ="valorIngresar">
+    <button onclick="ejecutarIngreso()">Ejecutar ingreso</button>
+  </div>
+
+  <div id="saldo">
+
+  </div>
+
+    <script>
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
+        class Cuenta {
+    constructor(cedula, nombre){
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.numeroCuenta = getRandomInt(0,1000) // Genera un numero aleatorio de cuenta
+        this.saldo = 0;
+    }
+ }
+        ocultarDiv();
+        retiroOculto();
+        ingresoOculto();
+        let nuevaCuenta;
+        function crearCuenta(){
+            let inputNombre = document.getElementById("nombre");
+            let inputCedula = document.getElementById("cedula");
+            nuevaCuenta = new Cuenta(cedula, nombre);
+
+        mostrarDiv();
+        ocultarCta();
+        }
+         
+
+        function ocultarDiv(){
+            let divOcultar = document.getElementById("informacion");
+            // Asi se ocultan elementos
+            divOcultar.hidden = true;
+        }
+
+        function mostrarDiv(){
+            let divOcultar = document.getElementById("informacion");
+            // Asi se ocultan elementos
+            divOcultar.hidden = false;
+        }
+
+        function ocultarCta(){
+            let ocultarCta = document.getElementById("cuenta");
+            ocultarCta.hidden = true;
+        }
+
+        function retirar(){
+            let divRetiro = document.getElementById("retiro");
+            divRetiro.hidden = false;
+        }
+        function retiroOculto(){
+            let divRetiro = document.getElementById("retiro");
+            divRetiro.hidden = true;
+        }
+
+        function ejecutarRetiro() {
+            let valorRetirar = document.getElementById("valorRetirar");
+        let saldo = Number(valorRetirar.value);
+        if (saldo > nuevaCuenta.saldo){
+            let errorSaldo = document.getElementById("errorSaldo");
+            errorSaldo.innerText="No tienes saldo";
+        } else {
+    nuevaCuenta.saldo = nuevaCuenta.saldo - saldo;
+    console.log(nuevaCuenta.saldo);
+        } 
+}    
+    
+//..................................
+
+function verSaldo(){
+            let divSaldo = document.getElementById("saldo");
+            divSaldo.innerText=nuevaCuenta.saldo;
+        }
+
+//.......................................
+
+function ejecutarIngreso() {
+            let valorIngresar = document.getElementById("valorIngresar");
+        let saldo1 = Number(valorIngresar.value);
+    nuevaCuenta.saldo = nuevaCuenta.saldo + saldo1;
+    console.log(nuevaCuenta.saldo);
+        } 
+  
+        function ingreso(){
+            let divIngresar = document.getElementById("ingresar");
+            divIngresar.hidden = false;
+        }
+
+        function ingresoOculto(){
+            let divIngresar = document.getElementById("ingresar");
+            divIngresar.hidden = true;
+        }
+
+    </script>
+
+</body>
+</html>

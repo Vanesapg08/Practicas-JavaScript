@@ -1,0 +1,23 @@
+//Solicita números al usuario hasta que introduzca un 0. Muestra la suma de todos los números introducidos.
+
+const prompt = require("prompt-sync")();
+
+let numero = prompt("Dame un numero");
+numero = Number(numero);
+if(isNaN(numero)){
+  console.log("ojo no ingresaste un numero");
+} else {
+	let sumatoria = numero;
+	// este != es el operador para preguntar que algo es diferente
+	while(numero != 0) {
+		numero = prompt("Dame otro numero: ");
+		numero = Number(numero);
+		if (isNaN(numero)){
+			console.log("no ingresaste un numero");
+		} else {	
+			sumatoria = sumatoria + numero;
+		}	
+	}
+	console.log("ey muy bien tecleaste el cero, chao y la suma es: " + sumatoria );
+}
+

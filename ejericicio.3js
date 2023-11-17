@@ -1,0 +1,7 @@
+//Solicita al usuario un número y determina si es positivo, mostrando un mensaje en consola.
+
+const prompt = require("prompt-sync")();
+
+let numero = prompt("Ingresa un numero");
+if (numero`
+

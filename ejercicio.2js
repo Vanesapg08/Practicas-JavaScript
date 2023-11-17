@@ -1,0 +1,7 @@
+
+//Usa `prompt` para solicitar al usuario su nombre. Luego, muestra un saludo personalizado con `console.log`.
+
+const prompt = require("prompt-sync")();
+
+let nombre = prompt("Ingresa tu nombre: ");
+console.log("hola " + nombre + " como estas?");
